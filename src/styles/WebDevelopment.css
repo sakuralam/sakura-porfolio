@@ -76,7 +76,14 @@
 .webdev-links a:hover {
   background-color: #374151;
 }
-/* Embedded YouTube project demo */
+.webdev-video-container {
+position: relative;
+width: 100%;
+aspect-ratio: 16 / 9;
+margin-bottom: 20px;
+overflow: hidden;
+border-radius: 8px;
+}
 .webdev-video {
 display: block;
 width: 100%;
@@ -86,3 +93,4 @@ border: none;
 border-radius: 8px;
 background: #000;
 }
+
