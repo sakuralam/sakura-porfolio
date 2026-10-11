@@ -2,6 +2,26 @@ import React from "react";
 import "../styles/ExperienceSection.css";
 
 const experiences = [
+
+    {
+    title: "Cybersecurity Intern – iTrust",
+    date: "May 2026 – September 2026",
+    bullets: [
+      "1.ICS Honeypot",
+      "Extended a Honeyd-based ICS honeypot emulating four Siemens S7 PLCs. Exposed S7comm on port 102 through proxy bridging, so emulated devices returned valid S7-1200 identity data to Nmap NSE probes.",
+      "Eliminated four deception tells that would reveal the honeypot under inspection: Replaced random-jitter sensor noise with a correlated, deterministic load model; aligned the Modbus and web interfaces so they reported the same values; implemented spec-correct responses for writes (FC 6/16) and exceptions for unsupported function codes.",
+      "Diagnosed four silent, cascading faults that had halted the attacker-intelligence pipeline after a migration, including a stale IP filter that discarded 100% of traffic and a file-ordering bug that skipped all new captures, and restored end-to-end event flow.",
+      "Designed outbound containment through a gateway using iptables DNAT, FORWARD, and MASQUERADE rules. Attacker traffic for DNS, HTTP, Telnet, SMB, and RDP was redirected to a sinkhole host that returns realistic responses, so it never reached the internet. Each path was verified through logs.",
+      "2. Power Grid Digital Twin (CISS26 National ICS Security Exercise)",
+      "Deployed and maintained a containerised digital twin of a 7-substation power grid (IEDs, PLCs, SCADA/HMI, historian, pandapower) communicating over IEC 61850 MMS and GOOSE.",
+      "Designed CTF challenges built on realistic attacks: false sensor injection that triggered real undervoltage protection logic; spoofed breaker states that created physically impossible historian records; forged GOOSE trip frames crafted with Scapy to impersonate IEDs.",
+      "Cross-validated IEC 61850 packet captures against historian records in Wireshark to produce forensic evidence for participants.",
+      "Automated parallel SSH health checks across 70 competition nodes."
+    ],
+    skills: [
+      "Python, Docker, Linux, iptables, Honeyd, Scapy, Wireshark, tcpdump, Modbus/TCP, S7comm, IEC 61850 (MMS/GOOSE), pandapower"
+    ],
+  },
   {
     title: "Fullstack Developer – SUTD",
     date: "October 2025 – January 2026",
@@ -43,6 +63,8 @@ const experiences = [
       "React", "Javascript", "HTML", "CSS", "Hosting Domain", "Node.js"
     ],
   },
+
+
 ];
 
 const ExperienceSection = () => {
