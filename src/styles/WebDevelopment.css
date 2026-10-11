@@ -85,12 +85,19 @@ overflow: hidden;
 border-radius: 8px;
 }
 .webdev-video {
-display: block;
-width: 100%;
-aspect-ratio: 16 / 9;
-height: auto;
-border: none;
-border-radius: 8px;
-background: #000;
+  display: block;
+  flex: 1;
+  width: 100%;
+  max-width: 520px; /* match roughly how wide your screenshots look */
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+  border-radius: 8px;
+  background: #000;
 }
 
+.webdev-details {
+  flex: 2;
+  min-width: 0; /* lets the text wrap instead of being pushed out */
+}
